@@ -21,4 +21,5 @@ from .import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',v.home),
+    path('register',v.register_view,name='reg'),
 ]
