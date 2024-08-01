@@ -1,0 +1,24 @@
+<h1>Expense list</h1>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Expense</th>
+        <th>Expense_type</th>
+        <th>Expense_date</th>
+        <th>Description</th>
+        <th>User</th>
+    </tr>
+    {%for i in incl%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.expense}}</td>
+        <td>{{i.expense_type}}</td>
+        <td>{{i.expense_date}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td><input type="button" value="Edit"></td>
+        <td><input type="button" value="Delete"></td>
+    </tr>
+    {%endfor%}
+</table>
