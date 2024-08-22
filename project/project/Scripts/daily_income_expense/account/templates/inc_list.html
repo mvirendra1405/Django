@@ -1,0 +1,58 @@
+{%extends 'sidebar.html'%}
+{%block body%}
+<h1>Income List</h1>
+
+<form action="{%url 'income:income_search'%}" method="post">
+    {%csrf_token%}
+    <textarea name="srch" id="" rows="1" cols="60"></textarea>
+    <input type="submit" value="search">
+</form>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Income</th>
+        <th>Income-type</th>
+        <th>Income-date</th>
+        <th>Description</th>
+        <th>User</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {%for i in incl%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.income}}</td>
+        <td>{{i.income_type}}</td>
+        <td>{{i.income_date}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td><a href="delete/{{i.id}}">delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+<style>
+.rside{
+    width:250px;
+    height: 100%;
+    background-color: rgb(166, 225, 228);
+    position: fixed;
+    right: 0%;
+    top: 0%;
+}
+h3{
+    margin: 20px;
+    padding: 20px;
+}
+.rside a{
+    text-decoration: none;
+    color: rgb(6, 26, 33);
+} 
+</style>
+<div class="rside">
+    <h2>Short By Income_type</h2>
+    <h3><a href="{%url 'income:inclist'%}">All</a></h3>
+    {%for i in inct%}
+    <h3><a href="{%url 'income:inct1' i%}">{{i}}</a></h3>
+    {%endfor%}
+</div>
+{%endblock%}

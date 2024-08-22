@@ -20,7 +20,10 @@ from .import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('addexpense',v.add_expense,name='add'),
-    path('exp_list',v.expense_list,name='list2'),
+    path('addexpense',v.add_expense,name='addexp'),
+    path('expenselist',v.expense_list,name='explist'),
+    path('delete1/<int:expid>',v.delete_exp),
+    path('expense_search',v.expense_search,name='expense_search'),
+    path('exp/<str:ext2>',v.sort_by_expensetype,name='ext1')
+    
 ]
-

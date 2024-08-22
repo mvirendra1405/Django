@@ -1,0 +1,30 @@
+{%include 'navbar.html'%}
+<h1>Employee list</h1>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>email</th>
+        <th>contact</th>
+        <th>age</th>
+        <th>address</th>
+        <th>delete1</th>
+        <th>delete2</th>
+        <th>edit</th>
+    </tr>
+    {%for i in object_list%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.contact}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.address}}</td>
+        <td><a href="delete1/{{i.id}}">delete1</a></td>
+        <td><a href="delete2/{{i.id}}">delete2</a></td>
+        <td><a href="edit/{{i.id}}">edit</a></td>
+      
+    </tr>
+    {%endfor%}
+</table>

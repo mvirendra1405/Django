@@ -1,12 +1,6 @@
-<h1>Daily Income Expense Project</h1>
-
-<h2><a href="">Home</a></h2>
-<h2><a href="{%url 'account:reg'%}">Register</a></h2>
-<h2><a href="{%url 'income:add'%}">AddIncome</a></h2>
-<h2><a href="{%url 'expense:add'%}">AddExpense</a></h2>
-<h2><a href="{%url 'income:list1'%}">IncomeList</a></h2>
-<h2><a href="{%url 'expense:list2'%}">ExpenseList</a></h2>
-<h2><a href="">Login</a></h2>
-<h2><a href="">Logout</a></h2>
-<h2><a href="">Edit_Profile</a></h2>
-<h2><a href="">About_Us</a></h2>
+{%extends 'sidebar.html'%}
+{%block body%}
+<h1>Daily Income Expense</h1>
+<h2 style="color: rgb(4, 34, 95); font-family: cursive;">Welcome: {{user}}</h2>
+<h2 style="color: rgb(4, 34, 95); font-family: cursive;">Total Balance:{{bal}}</h2>
+{%endblock%}

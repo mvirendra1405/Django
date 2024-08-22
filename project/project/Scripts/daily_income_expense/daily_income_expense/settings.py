@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hf^eeo%l$wxs3_5u$41b)j@3g0ug(dnv&b-7@5t!4j!x8@(d!g'
+SECRET_KEY = 'django-insecure-7odalakxdoi+*h=5#cbjsz7a9=qyb$)xmeipw9*3vs+3d%m%*n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'daily_income_expense.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'daily_t423',
+        'NAME': 'project',
         'USER':'root',
         'PASSWORD':'',
         'HOST':'localhost',
-        'PORT':'3306',
+        'PORT':'3306'
     }
 }
 

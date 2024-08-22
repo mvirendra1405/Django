@@ -1,0 +1,22 @@
+.side{
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+}
+.main{
+    padding-left: 210px;
+}
+
+.side a{
+    color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.side a:hover{
+    text-shadow: 5px;
+    color: rgb(193, 234, 9);
+}

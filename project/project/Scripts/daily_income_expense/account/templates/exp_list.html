@@ -1,0 +1,61 @@
+{%extends 'sidebar.html'%}
+{%block body%}
+<h1>Expense List</h1>
+
+<form action="{%url 'expense:expense_search'%}" method="post">
+    {%csrf_token%}
+    <textarea name="srch" id="" rows="1" cols="60"></textarea>
+    <input type="submit" value="search">
+</form>
+{%if expl%}
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Expense</th>
+        <th>Expense-type</th>
+        <th>Expense-date</th>
+        <th>Description</th>
+        <th>User</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {%for i in expl%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.expense}}</td>
+        <td>{{i.expense_type}}</td>
+        <td>{{i.expense_date}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td><a href="delete1/{{i.id}}">delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+{%else%}
+<h1>No Record Found..........</h1>
+{%endif%}
+<style>
+.rside{
+    width:250px;
+    height: 100%;
+    background-color: cadetblue;
+    position: fixed;
+    right: 0%;
+    top: 0%;
+}
+h3{
+    margin:20px;
+    padding:20px;
+}
+.rside a{
+    text-decoration: none;
+    color: black;
+} 
+</style>
+<div class="rside">
+    <h2>Short By Expense_type</h2>
+    <h3><a href="{%url 'expense:explist'%}">All</a></h3>
+    {%for i in expt%}
+    <h3><a href="{%url 'expense:ext1' i%}">{{i}}</a></h3>
+    {%endfor%}
+</div>
+{%endblock%}

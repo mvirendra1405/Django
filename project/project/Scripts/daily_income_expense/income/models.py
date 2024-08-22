@@ -1,20 +1,19 @@
 from django.db import models
 from django.contrib.auth.models import User
-
 # Create your models here.
-
-class Income(models.Model):
+class income(models.Model):
     income=models.IntegerField()
     income_type=models.CharField(max_length=30)
     income_date=models.DateField()
-    description=models.TextField(max_length=30)
+    description=models.TextField(max_length=100)
     user=models.ForeignKey(User,on_delete=models.CASCADE)
 
+
     class Meta:
-        db_table="income"
+        db_table='income'
 
 from django import forms
-class IncomeForm(forms.ModelForm):
+class incomeform(forms.ModelForm):
     class Meta:
-        model=Income
+        model=income
         fields='__all__'
