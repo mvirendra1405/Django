@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate,login,logout
 from .models import Product,Cart
 from django.contrib.auth.models import User
 from django.views.generic import DeleteView
+
 # Create your views here.
 def home(request):
     return render(request,'home.html')

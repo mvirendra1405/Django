@@ -1,0 +1,10 @@
+{%include 'navbar.html'%}
+<h1>Product</h1>
+
+{%for i in pl%}
+<p>{{i.p_name}}</p>
+<p>{{i.P_price}}</p>
+<p>{{i.p_description}}</p> 
+<!-- <a href="addtocart/{{i.id}}"><button>Add to cart</button></a>
+<button>Edit</button> -->
+{%endfor%}
