@@ -23,14 +23,17 @@ class Product(models.Model):
 
     class Meta:
         db_table='product'
+    
+    def __str__(self):
+        return self.Category.category_name
 
-# class Cart(models.Model):
-#     user=models.ForeignKey(User,on_delete=models.CASCADE)
-#     Product=models.ForeignKey(Product,on_delete=models.CASCADE)
+class Cart(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    Product=models.ForeignKey(Product,on_delete=models.CASCADE)
 
 
-#     class Meta:
-#         db_table='cart'
+    class Meta:
+        db_table='cart'
 
 #     def __str__(self):
 #         return self.Product.p_name  

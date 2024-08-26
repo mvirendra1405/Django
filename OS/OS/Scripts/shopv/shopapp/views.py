@@ -30,7 +30,7 @@ def login_view(request):
         user=authenticate(request,username=uname,password=passw)
 
         if user is not None:
-            request.session['uid']=user.id
+            # request.session['uid']=user.id
             login(request,user)
             return redirect('/')
         else:
