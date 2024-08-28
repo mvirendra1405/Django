@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login,logout
-from .models import Product
+from .models import Product,Cart
 from django.contrib.auth.models import User
 
 
@@ -30,7 +30,7 @@ def login_view(request):
         user=authenticate(request,username=uname,password=passw)
 
         if user is not None:
-            # request.session['uid']=user.id
+            request.session['uid']=user.id
             login(request,user)
             return redirect('/')
         else:
@@ -47,6 +47,23 @@ def product_list(request):
     pl=Product.objects.all()
     context={'pl':pl}
     return render(request,'productlist.html',context)
+
+def cart_list(request):
+    uid=request.session.get('uid')
+    cl=Cart.objects.filter(user_id=uid)
+    context={'cl':cl}
+    return render(request,'cartlist.html',context)
+
+def add_to_cart(request,pid):
+    product=Product.objects.get(id=pid)
+    uid=request.session.get('uid')
+    user=User.objects.get(id=uid)
+    c=Cart()
+    c.product=product
+    c.user=user
+    c.save()
+    return redirect('/productlist')
+
 
     
    

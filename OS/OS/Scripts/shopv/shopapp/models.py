@@ -29,12 +29,14 @@ class Product(models.Model):
 
 class Cart(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
-    Product=models.ForeignKey(Product,on_delete=models.CASCADE)
+    product=models.ForeignKey(Product,on_delete=models.CASCADE)
 
 
     class Meta:
         db_table='cart'
 
-#     def __str__(self):
-#         return self.Product.p_name  
+    def __str__(self):
+        return self.Product.p_name                    
+
+      
 
