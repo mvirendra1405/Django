@@ -1,0 +1,7 @@
+{%include 'navbar.html'%}
+<h1>Are You Sure You Want To Delete [ {{object}} ]</h1>
+
+<form action="" method="post">
+    {%csrf_token%}
+    <input type="submit" value="yes">
+</form>

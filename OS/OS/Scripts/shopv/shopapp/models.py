@@ -36,7 +36,7 @@ class Cart(models.Model):
         db_table='cart'
 
     def __str__(self):
-        return self.Product.p_name                    
+        return self.product.p_name                    
 
       
 

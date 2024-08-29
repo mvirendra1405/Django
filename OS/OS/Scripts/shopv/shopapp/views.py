@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login,logout
 from .models import Product,Cart
 from django.contrib.auth.models import User
-
+from django.views.generic import DeleteView
 
 
 # Create your views here.
@@ -55,15 +55,19 @@ def cart_list(request):
     return render(request,'cartlist.html',context)
 
 def add_to_cart(request,pid):
-    product=Product.objects.get(id=pid)
+    product_id=Product.objects.get(id=pid)
     uid=request.session.get('uid')
-    user=User.objects.get(id=uid)
+    user_id=User.objects.get(id=uid)
     c=Cart()
-    c.product=product
-    c.user=user
+    c.product=product_id
+    c.user=user_id
     c.save()
     return redirect('/productlist')
 
+class delete_cart(DeleteView):
+    template_name='delete.html'
+    model=Cart
+    success_url='/cartlist'
 
     
    

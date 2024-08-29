@@ -27,5 +27,5 @@ urlpatterns = [
     path('productlist',v.product_list),
     path('cartlist',v.cart_list),
     path('addtocart/<int:pid>',v.add_to_cart),
-    # path('delete/<int:pk>',v.delete_cart.as_view())
+    path('delete/<int:pk>',v.delete_cart.as_view()),
 ]
