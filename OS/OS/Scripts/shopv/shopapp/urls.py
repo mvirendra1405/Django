@@ -32,4 +32,5 @@ urlpatterns = [
     path('delete/<int:pk>',v.delete_cart.as_view()),
     path('search_product',v.search),
     path('update_cart/<int:item_id>/<str:action>/',v.update_cart,name='update_cart'),
+    path('footer/',v.footer),
 ]

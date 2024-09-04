@@ -1,24 +1,28 @@
 {%include 'navbar.html'%}
 <style>
 
-    #r1{
-        height: 100px;
-        width: 100%;
-        background: rgb(162, 152, 152);
-        text-align: center;
-        font-size: 60px;
-    }
-    .box{
-        background:  rgb(199, 195, 195);
-        height: 530px;
-        padding-left: 400px;
+   
+   .box{
+        background: rgb(220, 238, 136);
+        border: 2px solid black; 
+        height: 500px;
+        width: 800px;
+        padding-left: 100px;
+        margin-left: 350px;
+        margin-top: 70px;
     }
     #form{
        padding-top: 50px;
     }
+    h1{
+        margin-top:5px;
+        padding-top: 50px;
+        margin-left: 130px;
+    }
 </style>
-<div id="r1">Registration from<div>
+<div class="main">
 <div class="box">
+<h1>Registration from</h1>
 <form action="" method="post" id="form">
     {%csrf_token%}
     <table>
@@ -30,4 +34,5 @@
         </tr>
     </table>
 </form>
+</div>
 </div>

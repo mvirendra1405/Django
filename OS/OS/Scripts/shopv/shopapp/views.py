@@ -124,3 +124,7 @@ def update_cart(request, item_id, action):
     
     return redirect('/cartlist')
 
+def footer(request):
+    return render(request,'footer.html')
+
+
