@@ -1,5 +1,5 @@
 {%include 'navbar.html'%}
-{%load static%}
+{% load static %}
 
 
 
@@ -10,12 +10,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
-    <!-- <link rel="stylesheet" type="textcss" href="{%static 'css/login.css'%}"> -->
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">   
+    
+    <!-- <link rel="stylesheet" href="{% static 'css/login.css' %}">    -->
+     <style>
+        *{
+    background-image: url();   
+    }
+.main
+{
+    background: rgb(199, 195, 195);
+    height: 618px;
+    padding-top: 100px;
+}
+.login{
+       height: 400px;
+       width: 600px;
+       border: solid black 5px;
+       background: rgb(220, 238, 136);
+       margin: 0 auto;
+       border-radius: 10px;
+}
+h1{
+    margin: 20px 160px;
+    font-size: 50px;
+}
+.text{
+    margin-left: 10px;
+    border-radius: 5px;  
+    font-size: 30px;
+}
+.text2{
+   
+    margin-left: 32px;
+    font-size: 30px;
+}
+.btn
+{
+    background: rgb(24, 148, 214);
+    margin-left: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+label{
+    margin-left: 10px;
+    font-size: 30px;
+}
+     </style>
     
     
 </head>
 <body>
+    <div class="main">
        <div class="login">
         <h1>Login Form</h1>    
        <form action="" method="post">
@@ -28,6 +74,7 @@
         <button class="btn">Forget password</button>
        </form>
     </div>
+</div>
 </body>
 </html>
 

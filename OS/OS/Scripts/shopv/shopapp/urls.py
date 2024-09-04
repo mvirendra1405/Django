@@ -18,14 +18,18 @@ from django.contrib import admin
 from django.urls import path
 from .import views as v
 
+app_name="shopapp"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',v.home),
+    path('', v.home, name='home'),
     path('adduser',v.add_user),
     path('login',v.login_view),
     path('logout',v.logout_view),
-    path('productlist',v.product_list),
-    path('cartlist',v.cart_list),
-    path('addtocart/<int:pid>',v.add_to_cart),
+    path('productlist',v.product_list,name='product_list'),
+    path('cartlist',v.cart_list,name='cart_list'),
+    path('addtocart/<int:pk>',v.add_to_cart),
     path('delete/<int:pk>',v.delete_cart.as_view()),
+    path('search_product',v.search),
+    path('update_cart/<int:item_id>/<str:action>/',v.update_cart,name='update_cart'),
 ]

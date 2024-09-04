@@ -1,7 +1,8 @@
 
 {%load static%}
+
 <link rel="stylesheet" href="{%static 'css/bmin.css'%}">
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-info">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">shopv</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,12 +36,14 @@
           </li>
           
           
-        <form class="d-flex" role="search">
-          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button> -->
+        <form class="d-flex" role="search" action="search_product" method="post">
+          {%csrf_token%}
+          <input class="form-control me-2" name="srch" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success bg-secondary text-black"  type="submit">Search</button>
         </form>
       </div>
     </div>
+
   </nav>
 
   <script src="{%static 'js/bmin.js'%}"></script>

@@ -1,8 +1,25 @@
 {%include 'navbar.html'%}
+<style>
 
-<h1>Registration from</h1>
-
-<form action="" method="post">
+    #r1{
+        height: 100px;
+        width: 100%;
+        background: rgb(162, 152, 152);
+        text-align: center;
+        font-size: 60px;
+    }
+    .box{
+        background:  rgb(199, 195, 195);
+        height: 530px;
+        padding-left: 400px;
+    }
+    #form{
+       padding-top: 50px;
+    }
+</style>
+<div id="r1">Registration from<div>
+<div class="box">
+<form action="" method="post" id="form">
     {%csrf_token%}
     <table>
         {{form.as_table}}
@@ -13,3 +30,4 @@
         </tr>
     </table>
 </form>
+</div>
