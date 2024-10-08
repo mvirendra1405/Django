@@ -1,9 +1,6 @@
 {%include 'navbar.html'%}
 {% load static %}
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,10 +70,15 @@ label{
         <label>Password</label>
         <input type="password" name="password" placeholder="password" class="text2"><br><br>
         <button class="btn">login</button>
-        <button class="btn">Forget password</button>
+        <button class="btn">
+            <a href="{% url 'shopapp:password_reset' %}">Forgot your password?</a>
+        </button>
+        
        </form>
+       </div>
     </div>
-</div>
+    
+
 </body>
 </html>
 

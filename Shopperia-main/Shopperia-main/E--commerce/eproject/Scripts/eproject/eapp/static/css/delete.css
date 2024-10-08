@@ -1,0 +1,74 @@
+
+.delete-confirmation-container {
+    max-width: 600px; 
+    margin: 100px auto; 
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1f29; 
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-out; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.delete-title {
+    font-size: 1.8rem;
+    color: #eae200; 
+    margin-bottom: 1.5rem;
+    animation: glowText 1.5s infinite alternate;
+}
+
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 5px #ff5c5c, 0 0 10px #ff5c5c, 0 0 15px #ff5c5c;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff8c8c, 0 0 30px #ff8c8c, 0 0 40px #ff8c8c;
+    }
+}
+
+
+.delete-form {
+    margin-top: 20px;
+}
+
+
+.btn-confirm {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    background-color: #ff5c5c;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 92, 92, 0.6);
+}
+
+.btn-confirm:hover {
+    background-color: #ff8c8c;
+    transform: translateY(-4px); /* Lift effect */
+    box-shadow: 0 6px 20px rgba(255, 92, 92, 0.8);
+}
+
+@media (max-width: 576px) {
+    .delete-confirmation-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .delete-title {
+        font-size: 1.5rem;
+    }
+}

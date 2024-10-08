@@ -19,13 +19,14 @@ class Product(models.Model):
     p_price=models.IntegerField()
     p_description=models.TextField(max_length=300)
     Category=models.ForeignKey(Category,on_delete=models.CASCADE)
+    user=models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
+
 
 
     class Meta:
         db_table='product'
     
-    def __str__(self):
-        return self.Category.category_name
+    
 
 class Cart(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
@@ -37,7 +38,13 @@ class Cart(models.Model):
         db_table='cart'
 
     def __str__(self):
-        return self.product.p_name                    
+        return self.product.p_name     
+
+
+
+
+
+              
 
       
 

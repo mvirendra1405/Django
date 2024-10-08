@@ -13,7 +13,8 @@ class ProductAdmin(admin.ModelAdmin):
     list_display=['id','p_name','p_price','p_description','Category']
 admin.site.register(Product,ProductAdmin)
 
-admin.site.register(Cart)
+# admin.site.register(Cart)
+
 
 
 

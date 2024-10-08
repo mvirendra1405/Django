@@ -1,0 +1,13 @@
+{% include 'navbar.html' %}
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/delete.css'%}">
+<div class="delete-confirmation-container">
+  <h1 class="delete-title">Are You Sure You Want To Delete [ {{ object }} ]?</h1>
+
+  <form action="" method="post" class="delete-form">
+    {% csrf_token %}
+    <input type="submit" value="Yes" class="btn-confirm">
+  </form>
+</div>
+
+

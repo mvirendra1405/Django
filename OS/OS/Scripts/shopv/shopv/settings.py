@@ -125,3 +125,6 @@ MEDIA_URL="/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+RAZORPAY_KEY_ID='rzp_test_ydtjvCT6aXbGzt'
+RAZORPAY_KEY_SECRET='GS1XMlb0swhCK3FIqnrmTVHj'

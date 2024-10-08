@@ -9,7 +9,20 @@
   
 
     
-  
+    <form method="get" class="mb-4">
+      <div class="input-group">
+        <select name="category" class="form-select" aria-label="Category filter">
+          <option value="">All categories</option>
+          {% for category in categories %}
+          <option value="{{category.id}}">
+            {{category.category_name}}
+          </option>
+          {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-dark">Filter</button>
+      </div>
+    </form>
+    
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
   

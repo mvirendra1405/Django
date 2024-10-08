@@ -1,0 +1,35 @@
+
+.carousel-item {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-caption h5, .carousel-caption p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#yearly-sale {
+    background-color: #f5faff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+}
+
+#yearly-sale h3, #yearly-sale h2 {
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #ff5c5c, 0 0 10px #ff5c5c, 0 0 15px #ff5c5c;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff8
+    }
+}
+
