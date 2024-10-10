@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$rv=_hnjorn(p2uo2a(kz53b2vrrj9inmdny1dm-cs5i_yk@4z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -126,5 +126,5 @@ MEDIA_URL="/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-RAZORPAY_KEY_ID='rzp_test_ydtjvCT6aXbGzt'
-RAZORPAY_KEY_SECRET='GS1XMlb0swhCK3FIqnrmTVHj'
+RAZORPAY_KEY_ID='rzp_test_FwqkwlgBJIT19m'
+RAZORPAY_KEY_SECRET='CZNQOcqUo57esCotfMg2C7P0'
